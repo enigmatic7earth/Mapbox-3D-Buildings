@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RoG-JN-XsP">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wgo-6d-BnQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="RuD-h0-wDU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISb-Ue-sRI">
+                                <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PdJ-Oa-B7S">
+                                <rect key="frame" x="313" y="991" width="141" height="29"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Custom"/>
+                                </segments>
+                                <color key="tintColor" red="0.22314533589999999" green="0.35306608680000001" blue="0.98009043929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="changeMapStyle:" destination="BYZ-38-t0r" eventType="valueChanged" id="p2Z-Z3-FIt"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RuD-h0-wDU" firstAttribute="top" secondItem="PdJ-Oa-B7S" secondAttribute="bottom" constant="5" id="FjF-Mz-iSw"/>
+                            <constraint firstItem="PdJ-Oa-B7S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VjP-rD-LaI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pip-dH-btq"/>
+                    <connections>
+                        <outlet property="mapSwitchControl" destination="PdJ-Oa-B7S" id="OQN-ub-7XG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530.46875" y="369.7265625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tXX-me-7Kp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RoG-JN-XsP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y0f-Mi-c2Q">
+                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.22314533589999999" green="0.35306608680000001" blue="0.98009043929999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zjz-AY-kGH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRt-Ra-b3l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1249" y="370"/>
+        </scene>
+    </scenes>
+</document>
